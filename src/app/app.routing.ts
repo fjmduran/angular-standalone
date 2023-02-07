@@ -18,4 +18,12 @@ export const routes: Route[] = [
     path: 'third',
     component: ThirdPageComponent,
   },
+  {
+    path: 'concatObservables',
+    loadComponent: () =>
+      import('./concat-observables/concat-observables.component').then(
+        (component) => component.ConcatObservablesComponent
+      ),
+  },
+  
 ];
